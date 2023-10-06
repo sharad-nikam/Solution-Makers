@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="4" parallel="tests" name="Sanity">
+	<parameter name="env" value="qa"></parameter>
+	<listeners>
+		<listener class-name="com.sm.RedBus.listeners.ExtentReport" />
+		<listener class-name="com.sm.RedBus.listeners.AllureReportListner" />
+		<listener class-name="com.sm.RedBus.listeners.AnnotationTransformer" />
+	</listeners>
+
+	<test name="HomePage Test ">
+		<parameter name="browser" value="chrome" />
+		<parameter name="browserversion" value="117.0" />
+		<classes>
+			<class name="com.sm.RedBus.tests.HomePageTest" />
+		</classes>
+	</test> 
+	<!--<test name="SearchPage Test ">
+		<parameter name="browser" value="chrome" />
+		<parameter name="browserversion" value="115.0" />
+		<classes>
+			<class name="com.sm.RedBus.tests.SearchTest" />
+		</classes>
+	</test>-->
+	 <test name="TrainTickect page Test ">
+		<parameter name="browser" value="chrome" />
+		<parameter name="browserversion" value="117.0" />
+		<classes>
+			<class name="com.sm.RedBus.tests.TrainTicketPageTest" />
+		</classes>
+	</test>
+ 	<test name="CabRentalPageTest ">
+		<parameter name="browser" value="chrome" />
+		<parameter name="browserversion" value="117.0" />
+		<classes>
+			<class name="com.sm.RedBus.tests.CabRentalPageTest" />
+		</classes>
+	</test>
+	 <test name="RedBusFooter2 Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name="browserversion" value="115.0" />
+		<classes>
+			<class name="com.sm.RedBus.tests.RedBusFooter2Test" />
+		</classes>
+	</test> 
+</suite> <!-- Sanity -->
